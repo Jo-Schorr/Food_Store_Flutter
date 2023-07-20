@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:greengrocer/src/config/custom_colors.dart';
 import 'package:greengrocer/src/models/item_model.dart';
 import 'package:greengrocer/src/utils_services.dart';
 
@@ -61,6 +62,11 @@ class ProductScreen extends StatelessWidget {
                   // Preco
                   Text(
                     utilisServices.priceToCurrency(item.price),
+                    style: TextStyle(
+                      fontSize: 23,
+                      fontWeight: FontWeight.bold,
+                      color: CustomColors.customSwatchColor,
+                    ),
                   ),
                   // Descricao
 
