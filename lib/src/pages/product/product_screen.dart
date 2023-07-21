@@ -117,10 +117,12 @@ class ProductScreen extends StatelessWidget {
             ],
           ),
 
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Icons.arrow_back_ios,
+          SafeArea(
+            child: IconButton(
+              onPressed: () {},
+              icon: const Icon(
+                Icons.arrow_back_ios,
+              ),
             ),
           ),
         ],
