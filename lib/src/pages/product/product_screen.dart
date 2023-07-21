@@ -21,7 +21,10 @@ class ProductScreen extends StatelessWidget {
           Column(
             children: [
               Expanded(
-                child: Image.asset(item.imgUrl),
+                child: Hero(
+                  tag: item.imgUrl,
+                  child: Image.asset(item.imgUrl),
+                ),
               ),
               Expanded(
                 child: Container(
@@ -117,10 +120,16 @@ class ProductScreen extends StatelessWidget {
             ],
           ),
 
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Icons.arrow_back_ios,
+          Positioned(
+            left: 10,
+            top: 10,
+            child: SafeArea(
+              child: IconButton(
+                onPressed: () => Navigator.of(context).pop(),
+                icon: const Icon(
+                  Icons.arrow_back_ios,
+                ),
+              ),
             ),
           ),
         ],
