@@ -98,7 +98,7 @@ Please note that this guide is a basic outline and may vary depending on the ope
 Thanks
 ------
 
-**Josue Schorr** © 2018+, Released under the [MIT License].<br>
+**Josue Schorr** © 2023+, Released under the [MIT License].<br>
 
 > GitHub [@Jo-Schorr](https://github.com/Jo-Schorr) &nbsp;&middot;&nbsp;
 > LinkeDin [@Josué Schorr](https://www.linkedin.com/in/josu%C3%A9-schorr-bb4094219/)
