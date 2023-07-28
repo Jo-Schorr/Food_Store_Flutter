@@ -84,17 +84,6 @@ Please note that this guide is a basic outline and may vary depending on the ope
 <img src="screenshots/info.gif" alt="screen_02" height="300" />
 </div>
 
-## Server
-
-
-## Installation
-
-    $ clone this repo
-    $ Install dependencies Food_Store_Flutter
-    $ Install Netflix NodeJS & MongoDB
-    $ Run Food_Store_Flutter
-    $ flutter run
-
 Thanks
 ------
 
