@@ -5,14 +5,23 @@ import 'package:greengrocer/src/utils_services.dart';
 
 import '../commom_widgets/quantily_widget.dart';
 
-class ProductScreen extends StatelessWidget {
-  ProductScreen({
+class ProductScreen extends StatefulWidget {
+  const ProductScreen({
     Key? key,
     required this.item,
   }) : super(key: key);
 
   final ItemModel item;
+
+  @override
+  State<ProductScreen> createState() => _ProductScreenState();
+}
+
+class _ProductScreenState extends State<ProductScreen> {
   final UtilisServices utilisServices = UtilisServices();
+
+  int cartItemQuantity = 1;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,8 +33,8 @@ class ProductScreen extends StatelessWidget {
             children: [
               Expanded(
                 child: Hero(
-                  tag: item.imgUrl,
-                  child: Image.asset(item.imgUrl),
+                  tag: widget.item.imgUrl,
+                  child: Image.asset(widget.item.imgUrl),
                 ),
               ),
               Expanded(
@@ -51,7 +60,7 @@ class ProductScreen extends StatelessWidget {
                         children: [
                           Expanded(
                             child: Text(
-                              item.itemName,
+                              widget.item.itemName,
                               maxLines: 2,
                               overflow: TextOverflow.ellipsis,
                               style: const TextStyle(
@@ -60,13 +69,21 @@ class ProductScreen extends StatelessWidget {
                               ),
                             ),
                           ),
-                          QuantityWidget(),
+                          QuantityWidget(
+                            suffixText: widget.item.unit,
+                            value: cartItemQuantity,
+                            result: (quantity) {
+                              setState(() {
+                                cartItemQuantity = quantity;
+                              });
+                            },
+                          ),
                         ],
                       ),
 
                       // Preco
                       Text(
-                        utilisServices.priceToCurrency(item.price),
+                        utilisServices.priceToCurrency(widget.item.price),
                         style: TextStyle(
                           fontSize: 23,
                           fontWeight: FontWeight.bold,
@@ -80,7 +97,7 @@ class ProductScreen extends StatelessWidget {
                           padding: const EdgeInsets.symmetric(vertical: 10),
                           child: SingleChildScrollView(
                             child: Text(
-                              item.description * 2,
+                              widget.item.description * 2,
                               style: const TextStyle(
                                 height: 1.5,
                               ),
