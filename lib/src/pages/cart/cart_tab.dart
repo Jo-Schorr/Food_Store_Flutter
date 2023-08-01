@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:greengrocer/src/config/custom_colors.dart';
 import 'package:greengrocer/src/utils_services.dart';
+// ignore: library_prefixes
 import 'package:greengrocer/src/config/app_data.dart' as appData;
 
 class CartTab extends StatelessWidget {
@@ -20,7 +21,7 @@ class CartTab extends StatelessWidget {
             child: ListView.builder(
               itemCount: appData.cartItems.length,
               itemBuilder: (_, index) {
-                return const Text('appData.cartItems[index].item.Name');
+                return Text(appData.cartItems[index].item.itemName);
               },
             ),
           ),
