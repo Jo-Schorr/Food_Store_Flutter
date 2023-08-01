@@ -44,7 +44,7 @@ ItemModel mango = ItemModel(
   imgUrl: 'assets/fruits/mango.png',
   itemName: 'Manga',
   price: 4.99,
-  unit: 'kg',
+  unit: 'un',
 );
 
 ItemModel papaya = ItemModel(
@@ -76,7 +76,7 @@ List<String> categories = [
 List<CartItemModel> cartItems = [
   CartItemModel(
     item: apple,
-    quantity: 2,
+    quantity: 1,
   ),
   CartItemModel(
     item: mango,
