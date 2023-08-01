@@ -20,7 +20,7 @@ class CartTab extends StatelessWidget {
             child: ListView.builder(
               itemCount: appData.cartItems.length,
               itemBuilder: (_, index) {
-                return const Text('appData.cartItems[index].item.Name');
+                return Text(appData.cartItems[index].item.itemName);
               },
             ),
           ),
