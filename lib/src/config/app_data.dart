@@ -1,5 +1,7 @@
 import 'package:greengrocer/src/models/item_model.dart';
 
+import '../models/cart_item_model.dart';
+
 ItemModel apple = ItemModel(
   description:
       'A é uma fruta saborosa, suculenta e amplamente apreciada em todo o mundo. Conhecida por sua cor vibrante e sabor adocicado, ela é um deleite refrescante e nutritivo para ser apreciado em qualquer ocasião. Uma das características marcantes da melhor maçã vermelha é sua textura crocante e firme, tornando-a uma escolha popular para ser consumida in natura ou como ingrediente em diversas receitas, desde saladas até sobremesas. Além de ser uma opção saborosa, a melhor maçã vermelha também é uma excelente fonte de nutrientes essenciais para a saúde. Ela é rica em vitaminas, como a vitamina C, que fortalece o sistema imunológico, e a vitamina A, que é importante para a saúde dos olhos e da pele. Também é uma boa fonte de fibras, ajudando na digestão e promovendo a sensação de saciedade.',
@@ -69,4 +71,19 @@ List<String> categories = [
   'Verduras',
   'Temperos',
   'Cereais',
+];
+
+List<CartItemModel> cartItems = [
+  CartItemModel(
+    item: apple,
+    quantity: 2,
+  ),
+  CartItemModel(
+    item: mango,
+    quantity: 2,
+  ),
+  CartItemModel(
+    item: guava,
+    quantity: 2,
+  ),
 ];
