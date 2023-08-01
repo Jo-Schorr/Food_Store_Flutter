@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:greengrocer/src/config/custom_colors.dart';
 import 'package:greengrocer/src/utils_services.dart';
+// ignore: library_prefixes
 import 'package:greengrocer/src/config/app_data.dart' as appData;
 
 class CartTab extends StatelessWidget {
